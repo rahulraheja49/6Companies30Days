@@ -43,8 +43,7 @@ class Solution
             int c1 = 0, c2 = 0;
             
             if(str.charAt(i-1) > '0') c1 = dp[i-1];
-            if(str.charAt(i-2) == '1' || (str.charAt(i-2) == '2' && str.charAt(i-1) < '7'))
-                c2 = dp[i-2];
+            if(str.charAt(i-2) == '1' || (str.charAt(i-2) == '2' && str.charAt(i-1) < '7')) c2 = dp[i-2];
                 
             dp[i] = (c1+c2)%1000000007;
         }
